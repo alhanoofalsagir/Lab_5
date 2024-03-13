@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'PersonApp/style.css' %}">   
+    <title>People List</title>
+</head>
+<body>
+    <h2>People List</h2>
+    <ul>
+        {% for person in people %}
+            <li>{{ person }}</li>
+        {% endfor %}
+    </ul>
+    <p><a href="{% url 'add_view' %}">Add a Person</a></p>
+</body>
+</html>
